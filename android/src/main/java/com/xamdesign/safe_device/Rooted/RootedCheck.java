@@ -2,7 +2,7 @@ package com.xamdesign.safe_device.Rooted;
 
 import android.content.Context;
 
-import com.scottyab.rootbeer.RootBeer;
+import com.xamdesign.safe_device.Rooted.RootCheckDs;
 import android.os.Build;
 
 public class RootedCheck {
@@ -29,7 +29,7 @@ public class RootedCheck {
     }
 
     private static Boolean rootBeerCheck(Context context) {
-        RootBeer rootBeer = new RootBeer(context);
+        RootCheckDs rootBeer = new RootCheckDs(context);
         rootBeer.setLogging(false);
         String brand = Build.BRAND.toLowerCase();
         if(brand.contains(ONEPLUS) || brand.contains(MOTO) || brand.contains(XIAOMI) || brand.contains(LENOVO)) {
