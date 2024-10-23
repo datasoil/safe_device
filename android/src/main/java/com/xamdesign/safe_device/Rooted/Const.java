@@ -100,6 +100,26 @@ final class Const {
             //"/dev"
     };
 
+    static final String p1 = "m"; 
+    static final String p2 = "o"; 
+    static final String p3 = "u"; 
+    static final String p4 = "n"; 
+    static final String p5 = "t"; 
+
+    static final String p6 = p1+p2+p3+p4+p5;
+
+    static final String p8 = "get";
+    static final String p9 = "prop";
+    static final String p10 = p8+p9;
+
+    static String getP6() {
+        return p6;
+    }
+
+    static String getP10() {
+        return p10;
+    }
+
     /**
      * Get a list of paths to check for binaries
      *

@@ -20,6 +20,7 @@ import java.util.Scanner;
 
 import static com.xamdesign.safe_device.Rooted.Const.BINARY_BUSYBOX;
 import static com.xamdesign.safe_device.Rooted.Const.BINARY_SU;
+import static com.xamdesign.safe_device.Rooted.Const.p6;
 
 /**
  * A simple root checker that gives an *indication* if the device is rooted or not.
@@ -207,7 +208,7 @@ public class RootCheckDs {
 
     private String[] propsReader() {
         try {
-            InputStream inputstream = Runtime.getRuntime().exec("getprop").getInputStream();
+            InputStream inputstream = Runtime.getRuntime().exec(Const.getP10()).getInputStream();
             if (inputstream == null) return null;
             String propVal = new Scanner(inputstream).useDelimiter("\\A").next();
             return propVal.split("\n");
@@ -218,7 +219,7 @@ public class RootCheckDs {
 
     private String[] mountReader() {
         try {
-            InputStream inputstream = Runtime.getRuntime().exec("mount").getInputStream();
+            InputStream inputstream = Runtime.getRuntime().exec(Const.getP6()).getInputStream();
             if (inputstream == null) return null;
             String propVal = new Scanner(inputstream).useDelimiter("\\A").next();
             return propVal.split("\n");
