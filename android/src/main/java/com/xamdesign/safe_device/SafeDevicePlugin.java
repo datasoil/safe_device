@@ -82,7 +82,8 @@ public class SafeDevicePlugin implements FlutterPlugin, MethodChannel.MethodCall
         //         // For now, let's just say false
         //         result.success(false);
         //     }
-        } else {
+        // }
+        else {
             result.notImplemented();
         }
     }
